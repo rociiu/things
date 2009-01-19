@@ -1,0 +1,33 @@
+<fieldset class="new_entry">
+	<% form_for(@entry) do |f| %>
+	  <%= f.error_messages %>
+	<dl>
+		<dt>
+		  	<%= f.label :title %>
+		  </dt>
+		  <dd>
+		  	<%= f.text_field :title %>
+		  </dd>
+		<dt>
+			<%= f.label :note %>
+		  </dt>
+		  <dd>
+			<%= f.text_area :note , :cols => 50, :rows => 5 %>
+		  </dd>
+		<dt>
+			<%= f.label :due_at %>
+		  </dt>
+		  <dd>
+			<%= f.datetime_select :due_at %>
+			<%= f.hidden_field :status, :value => @status %>
+		  </dd>
+		<dd>
+			<%= f.submit "Create" %>
+		</dd>
+	</dl>
+	  
+
+	    
+	  
+	<% end %>
+</fieldset>

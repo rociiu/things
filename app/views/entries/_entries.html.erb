@@ -1,0 +1,5 @@
+<ul class="entries">
+	<% for entry in @entries %>
+		<li><input type="checkbox" name="done" rel="<%= entry.id %>"></input><span><%= entry.title %></span></li>
+	<% end %>
+</ul>
